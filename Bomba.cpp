@@ -12,3 +12,7 @@ int Bomba::getTurnoTotal(){
 void Bomba::setTurnoTotal(int turno){
     turnoExplotar = turno;
 }
+
+void Bomba::toString(){
+    cout<<marca;
+}

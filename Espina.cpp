@@ -11,3 +11,7 @@ int Espina::getCant(){
 void Espina::setCant(int cantt){
     cant = cantt;
 }
+
+void Espina::toString(){
+    cout<<marca;
+}

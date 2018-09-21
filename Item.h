@@ -11,10 +11,13 @@ class Item{
         vector<Bomba*> listaBombas;
 
     public:
+        char marca;
+
+    public:
         Item();
         int getX();
         int getY();
-        virtual void _string()=0;
+        virtual void toString()=0;
 
 };
 

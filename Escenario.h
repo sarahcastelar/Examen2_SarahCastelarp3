@@ -21,6 +21,7 @@ class Escenario {
         void freeMatrix(Item***);
         void printMatrix();
         void toString();
+        ~Escenario();
         
 
 };

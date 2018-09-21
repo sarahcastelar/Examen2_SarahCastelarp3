@@ -11,6 +11,7 @@ class Normal: public Bomba{
         Normal();
         int getValorAlcance();
         void setValorAlcance();
+        virtual void toString();
         
 
 };

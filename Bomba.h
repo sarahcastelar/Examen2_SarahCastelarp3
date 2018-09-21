@@ -10,6 +10,7 @@ class Bomba: public Item {
         Bomba();
         int getTurnoTotal();
         void setTurnoTotal(int);
+        virtual void toString();
 };
 
 #endif

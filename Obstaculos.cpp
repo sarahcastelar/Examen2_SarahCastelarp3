@@ -1,4 +1,5 @@
 #include "Obstaculos.h"
+#include "Item.h"
 
 Obstaculos::Obstaculos(){
     marca = 'o';
@@ -10,8 +11,4 @@ char Obstaculos::getMarca(){
 
 void Obstaculos::toString(){
     cout<<marca;
-}
-
-void Obstaculos::_string(){
-    cout<<"hola";
 }

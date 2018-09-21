@@ -10,6 +10,7 @@ class Espina : public Bomba{
         Espina();
         int getCant();
         void setCant(int);
+        virtual void toString();
 
 };
 

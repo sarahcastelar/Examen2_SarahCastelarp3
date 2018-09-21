@@ -1,9 +1,10 @@
 #ifndef JUGADOR_H
 #define JUGADOR_H
+#include "Item.h"
 #include <iostream>
 using namespace std;
 
-class Jugador{
+class Jugador: public Item{
 
     private:
         string nombre;
@@ -12,6 +13,7 @@ class Jugador{
 
     public:
         Jugador(string,bool,bool);
+        virtual void toString();
         
 };
 

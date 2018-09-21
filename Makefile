@@ -8,9 +8,6 @@ Escenario.o:	Item.h Escenario.cpp Obstaculos.cpp
 Espina.o:	Espina.h Espina.o 
 	g++ -c Espina.cpp
 
-Item.o:	Item.h Obstaculos.h 
-	g++ -c Item.cpp
-
 Normal.o:	Normal.h 
 	g++ -c Normal.cpp
 
@@ -19,3 +16,6 @@ Obstaculos.o:	Obstaculos.h
 
 Bomba.o:	Bomba.h Bomba.cpp Item.h
 	g++ -c Bomba.cpp
+
+Item.o:	Item.h Item.cpp
+	g++ -c Item.cpp

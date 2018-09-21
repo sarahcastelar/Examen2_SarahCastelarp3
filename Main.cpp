@@ -8,6 +8,7 @@ using namespace std;
 vector<Escenario*> escenario;
 Escenario* e;
 
+
 int menu (){
    int opcion = 0;
    while (true){
@@ -28,13 +29,20 @@ int menu (){
 
 
 int main (){
+	string nombre;
+	e = new Escenario("Hola");
+
+
 	int opcion = 0;
 	while (opcion != 4){
-        e = new Escenario("Hola");
-
-		switch (opcion = menu()){
+		switch (opcion = menu()){ 
 			case 1:
+				//e->printMatrix();
+				cout<<"cual es su nombre?"<<endl;
+				cin>>nombre;
 				e->printMatrix();
+				cout<<"Ingrese coordenadas a mover (wasd)"<<endl;
+				
 
 
 

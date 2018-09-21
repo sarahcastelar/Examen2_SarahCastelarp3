@@ -5,7 +5,7 @@
 using namespace std;
 
 Normal::Normal(){
-
+    marca = 'B';
 }
 
 int Normal::getValorAlcance(){
@@ -17,19 +17,6 @@ void Normal::setValorAlcance(){
     valorAlcance = 1 + rand() % (5 - 1);
 }
 
-/*
-
- 
-int main()
-{
-    int num, c;
-    
-    
-    for(c = 1; c <= 10; c++)
-    {
-        num = 1 + rand() % (11 - 1);
-        cout << num<< " ";
-    }
-
-
-*/
+void Normal::toString(){
+    cout<<marca;
+}

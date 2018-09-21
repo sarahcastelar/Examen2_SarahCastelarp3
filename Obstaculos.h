@@ -4,13 +4,12 @@
 
 class Obstaculos: public Item{
     private:
-        char marca;
+        
 
     public:
         Obstaculos();
         char getMarca();
         void toString();
-        void _string();
 
 };
 

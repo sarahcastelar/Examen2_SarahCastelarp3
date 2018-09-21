@@ -1,6 +1,7 @@
 #include "Item.h"
 #include "Escenario.h"
 #include "Obstaculos.h"
+#include "Normal.h"
 #include <typeinfo>
 
 Escenario::Escenario(string nombre){
@@ -25,28 +26,11 @@ Item*** Escenario::createMatrix(){
 }
 
 Item*** Escenario::fillMatrix(Item*** matrix){
-	int random;
-    bool si = true;
+	int random, random2, c = 0;
     Obstaculos* o;
 	srand(time(NULL));
+	Normal* b;
 
-	/*
-	 //crear matriz
-    for (int i = 0; i < size; i++){
-        tablero[i] = new Casilla*[size];
-
-    }
-
-    //inicializar matriz
-    for (int i = 0; i < size; i++){
-        for (int j = 0; j < size; j++){
-            tablero[i][j] = new CasillaTTT(new Marca('.'));
-        }
-    }
-
-
-
-	*/
 	for (int i = 0; i < filas; i++){
 		for (int j = 0; j < col; j++){
             //poner los obstaculos siempre. 
@@ -55,7 +39,17 @@ Item*** Escenario::fillMatrix(Item*** matrix){
                 matrix[i][j] = o;
             }else
 				matrix[i][j] = NULL;
-            si = false;
+
+			//poner bombas randomnllyy
+			random = 1 + rand() % (11 - 1);
+			random2 = 1 + rand() % (11 - 1);
+
+			while (c < 4){
+				b = new Normal();
+				matrix[random][random2] = b;
+			}
+
+            
 		}
 	}
 	return matrix;
@@ -86,8 +80,33 @@ void Escenario::printMatrix(){
 			
 			cout<<endl;
 		}
-	}else
-		cout<<"null";
+	}
 	
+}
+
+Escenario::~Escenario(){
+	if (matrix!=NULL){
+        //liberar contenido de la matriz
+        for(int i = 0; i < filas; i++){
+            for (int j = 0; j < col; j++){
+                delete matrix[i][j];
+                matrix [i][j] = NULL;
+            }
+            /*
+                liberar el arreglo de las filas 
+                delete[] tablero [i];
+                tablero[i] = NULL;
+            */
+        }
+
+        for (int i = 0; i < filas; i++){
+            for (int j = 0; j < col; j++){
+                delete[] matrix [i]; //si no pongo corchetes al delete solo libera el first de cada arreglo.
+                matrix[i] = NULL;
+            }
+        }
+
+        delete [] matrix;
+	}
 }
 
