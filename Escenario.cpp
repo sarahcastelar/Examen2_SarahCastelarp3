@@ -19,7 +19,7 @@ Item*** Escenario::getMatrix(){
 Item*** Escenario::createMatrix(){
 	Item*** retVal = new Item**[filas];
 
-	for (int i = 0; i < col; i++){
+	for (int i = 0; i < filas; i++){
 		retVal[i] = new Item* [col];
 	}
 	return retVal;

@@ -31,21 +31,19 @@ int menu (){
 int main (){
 	string nombre;
 	e = new Escenario("Hola");
-
+	cout<<"hola";
 
 	int opcion = 0;
 	while (opcion != 4){
 		switch (opcion = menu()){ 
 			case 1:
+			/*
 				//e->printMatrix();
 				cout<<"cual es su nombre?"<<endl;
 				cin>>nombre;
 				e->printMatrix();
 				cout<<"Ingrese coordenadas a mover (wasd)"<<endl;
-				
-
-
-
+				*/
 
 			break;
 
